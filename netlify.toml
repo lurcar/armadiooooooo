@@ -1,0 +1,14 @@
+[build]
+publish = "dist/public"
+functions = "dist/server"
+command = "npx vite build"
+
+[[redirects]]
+from = "/api/*"
+to = "/.netlify/functions/index"
+status = 200
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
